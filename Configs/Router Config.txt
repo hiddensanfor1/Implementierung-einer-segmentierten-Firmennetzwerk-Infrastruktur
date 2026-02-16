@@ -1,9 +1,4 @@
-!
-! ##########################################################
-! PROJECT: SECURE EDGE NETWORK - ROUTER CONFIGURATION
-! DESCRIPTION: INTER-VLAN ROUTING (ROUTER-ON-A-STICK)
-! DATE: 16.02.2026
-! ##########################################################
+##########################################################
 !
 version 15.1
 hostname Router-Main
@@ -12,7 +7,7 @@ ip cef
 no ipv6 cef
 !
 spanning-tree mode pvst
-!
+
 ! --- Interface ---
 interface GigabitEthernet0/0
  no ip address
