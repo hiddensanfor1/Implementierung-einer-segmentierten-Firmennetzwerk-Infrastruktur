@@ -1,11 +1,11 @@
-# 🌐 Projekt: Implementierung einer segmentierten Firmennetzwerk-Infrastruktur
+# Projekt: Implementierung einer segmentierten Firmennetzwerk-Infrastruktur
 
-## 📌 Projektübersicht
+## Projektübersicht
 Dieses Projekt demonstriert die Planung und technische Umsetzung einer sicheren Netzwerkarchitektur für ein mittelständisches Unternehmen mit **Cisco-Hardware**. Das Ziel war die logische Trennung verschiedener Abteilungen mittels **VLANs**, um die Netzwerksicherheit zu erhöhen und den Broadcast-Traffic zu optimieren.
 
 ---
 
-## 🏗️ Netzwerk-Design & Topologie
+## Netzwerk-Design & Topologie
 Die Infrastruktur basiert auf dem **Router-on-a-Stick** Prinzip, welches ein effizientes Inter-VLAN-Routing über einen physischen Trunk-Port ermöglicht.
 
 ### Netzplan & VLAN-Segmentierung
@@ -19,7 +19,7 @@ Die Infrastruktur basiert auf dem **Router-on-a-Stick** Prinzip, welches ein eff
 
 ---
 
-## ⚙️ Technische Umsetzung
+## Technische Umsetzung
 
 ### 1. Layer 2 Konfiguration (Switching)
 * **VLAN-Datenbank:** Erstellung und Benennung der funktionalen VLANs zur Netzisolierung.
