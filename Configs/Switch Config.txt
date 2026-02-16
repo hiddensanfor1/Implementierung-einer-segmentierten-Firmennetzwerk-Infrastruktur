@@ -1,0 +1,43 @@
+!
+version 15.0
+hostname Etagen-Switch
+!
+vlan 10
+ name Management
+!
+vlan 20
+ name Mitarbeiter
+!
+vlan 30
+ name IoT_Security
+!
+interface FastEthernet0/1
+ switchport access vlan 20
+ switchport mode access
+!
+interface FastEthernet0/2
+ switchport access vlan 30
+ switchport mode access
+!
+interface FastEthernet0/3
+ switchport access vlan 20
+ switchport mode access
+!
+interface FastEthernet0/4
+ switchport access vlan 10
+ switchport mode access
+!
+interface GigabitEthernet0/1
+ switchport mode trunk
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+line con 0
+ logging synchronous
+!
+line vty 0 4
+ login
+!
+end
