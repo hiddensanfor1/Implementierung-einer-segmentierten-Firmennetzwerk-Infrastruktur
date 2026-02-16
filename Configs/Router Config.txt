@@ -1,0 +1,57 @@
+!
+! ##########################################################
+! PROJECT: SECURE EDGE NETWORK - ROUTER CONFIGURATION
+! DESCRIPTION: INTER-VLAN ROUTING (ROUTER-ON-A-STICK)
+! DATE: 16.02.2026
+! ##########################################################
+!
+version 15.1
+hostname Router-Main
+!
+ip cef
+no ipv6 cef
+!
+spanning-tree mode pvst
+!
+! --- Interface ---
+interface GigabitEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+ no shutdown
+!
+! --- VLAN 10: Management & Servers ---
+interface GigabitEthernet0/0.10
+ description Management-VLAN (Sub-Interface)
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+!
+! --- VLAN 20: Mitarbeiter ---
+interface GigabitEthernet0/0.20
+ description Mitarbeiter-VLAN (Sub-Interface)
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
+!
+! --- VLAN 30: Sicherheit ---
+interface GigabitEthernet0/0.30
+ description IoT-Security-VLAN (Sub-Interface)
+ encapsulation dot1Q 30
+ ip address 192.168.30.1 255.255.255.0
+!
+interface GigabitEthernet0/1
+ no ip address
+ shutdown
+!
+interface GigabitEthernet0/2
+ no ip address
+ shutdown
+!
+ip classless
+!
+line con 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ login
+!
+end
